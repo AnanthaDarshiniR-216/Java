@@ -1,0 +1,7 @@
+class Solution {
+    public int hammingWeight(int n){
+        String Binarystring = Integer.toBinaryString(n);
+        int onecount = Integer.bitCount(n);
+        return onecount;
+    }
+}
