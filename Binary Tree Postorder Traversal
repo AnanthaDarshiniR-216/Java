@@ -1,0 +1,13 @@
+class Solution {
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        sol(root , list);
+        return list;
+    }
+    public void sol(TreeNode root , List<Integer> list){
+        if(root == null) return;
+        sol(root.left , list);
+        sol(root.right , list);
+        list.add(root.val);
+    }
+}
